@@ -18,6 +18,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'asset_url' => env('ASSET_ URL', 'http://Localhost/simple_portfolio/public/'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
