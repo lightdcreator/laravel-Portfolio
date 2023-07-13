@@ -44,7 +44,7 @@
                                                     style="width: 60px; height: 50px;"> </td>
 
                                             <td>
-                                                <a href="{{ route('edit.multi.image', $item->id) }}" class="btn btn-info sm"
+                                                <a href="{{ route('edit.portfolio', $item->id) }}" class="btn btn-info sm"
                                                     title="Edit Data"> <i class="fas fa-edit"></i> </a>
 
                                                 <a href="{{ route('delete.multi.image', $item->id) }}"
