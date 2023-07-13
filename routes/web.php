@@ -5,6 +5,7 @@ use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\PortfolioController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -54,7 +55,13 @@ Route::controller(AboutController::class)->group(function () {
 
 
 
+//Portfolio
 
+Route::controller(PortfolioController::class)->group(function(){
+
+Route::get('/all/portfolio','AllPortfolio')->name('all.portfolio');
+
+});
 
 
 
