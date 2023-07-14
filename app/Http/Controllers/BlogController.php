@@ -15,4 +15,10 @@ class BlogController extends Controller
         $blogs = Blog::latest()->get();
         return view('admin.blogs.blogs_all', compact('blogs'));
     } // End Method
+
+
+    public function AddBlog()
+    {
+        return view('admin.blogs.blogs_add');
+    } // End Method
 }
