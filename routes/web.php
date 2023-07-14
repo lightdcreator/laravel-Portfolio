@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\PortfolioController;
+use App\Models\BlogCategory;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -70,6 +72,10 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/portfolio/details/{id}', 'PortfolioDetails')->name('portfolio.details');
 });
 
+
+Route::controller(BlogCategoryController::class)->group(function () {
+    Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');
+});
 
 
 Route::get('/dashboard', function () {

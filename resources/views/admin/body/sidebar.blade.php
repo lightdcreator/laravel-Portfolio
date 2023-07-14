@@ -52,64 +52,19 @@
                      </ul>
                  </li>
 
-                 {{-- <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-mail-send-line"></i>
-                         <span>Portfolio Page Setup</span>
-                     </a>
-                     <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="">All Portfolio</a></li>
-                         <li><a href="">Add Portfolio</a></li>
-
-                     </ul>
-                 </li>
-
                  <li class="menu-title">Pages</li>
 
-                 <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-account-circle-line"></i>
-                         <span>Blog Category</span>
-                     </a>
-                     <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="">All Blog Category</a></li>
-                         <li><a href="">Add Blog Category</a></li>
-                     </ul>
-                 </li>
 
-                 <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-profile-line"></i>
-                         <span>Blog Page</span>
-                     </a>
-                     <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="">All Blog</a></li>
-                         <li><a href="">Add Blog</a></li>
-
-                     </ul>
-                 </li>
-
-                 <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-profile-line"></i>
-                         <span>Footer Page Setup</span>
-                     </a>
-                     <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="">Footer Setup</a></li>
-
-                     </ul>
-                 </li>
-
-                 <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-profile-line"></i>
-                         <span>Contact Message </span>
-                     </a>
-                     <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="">Contact Message</a></li>
-
-                     </ul>
-                 </li> --}}
+    <li>
+        <a href="javascript: void(0);" class="has-arrow waves-effect">
+            <i class="ri-account-circle-line"></i>
+            <span>Blog Category</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="{{ route('all.blog.category') }}">All Blog Category</a></li>
+            <li><a href="auth-login.html">Add Blog Category</a></li>
+        </ul>
+    </li>
 
              </ul>
          </div>
