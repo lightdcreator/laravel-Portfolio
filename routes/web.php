@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\PortfolioController;
 use App\Models\BlogCategory;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -85,6 +86,11 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::post('/update/blog/category/{id}', 'UpdateBlogCategory')->name('update.blog.category');
 
     Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');
+});
+
+// Blog All Route
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/all/blog', 'AllBlog')->name('all.blog');
 });
 
 
