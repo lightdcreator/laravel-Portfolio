@@ -2,15 +2,23 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\MultiImage;
-use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
-use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Carbon;
 
 class AboutController extends Controller
 {
+    public function AboutPage()
+    {
+
+        $aboutpage = About::find(1);
+        return view('admin.about_page.about_page_all', compact('aboutpage'));
+    } // End Method
+
+
 
     public function UpdateAbout(Request $request)
     {
@@ -57,13 +65,6 @@ class AboutController extends Controller
 
     } // End Method
 
-    public function AboutPage()
-    {
-
-        $aboutpage = About::find(1);
-        return view('admin.about_page.about_page_all', compact('aboutpage'));
-    } // End Method
-
 
     public function HomeAbout()
     {
@@ -72,10 +73,11 @@ class AboutController extends Controller
         return view('frontend.about_page', compact('aboutpage'));
     } // End Method
 
+
     public function AboutMultiImage()
     {
 
-        return view('admin.about_page.multiimage');
+        return view('admin.about_page.multimage');
     } // End Method
 
 
@@ -107,6 +109,7 @@ class AboutController extends Controller
 
         return redirect()->route('all.multi.image')->with($notification);
     } // End Method
+
 
     public function AllMultiImage()
     {
@@ -141,6 +144,7 @@ class AboutController extends Controller
                 'multi_image' => $save_url,
 
             ]);
+
             $notification = array(
                 'message' => 'Multi Image Updated Successfully',
                 'alert-type' => 'success'
@@ -167,5 +171,6 @@ class AboutController extends Controller
 
         return redirect()->back()->with($notification);
     } // End Method
+
 
 }
