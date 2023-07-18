@@ -9,6 +9,7 @@ use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Home\HomeSliderController;
 
 Route::get('/', function () {
@@ -107,8 +108,13 @@ Route::controller(BlogController::class)->group(function () {
 //Footer Route
 Route::controller(FooterController::class)->group(function () {
     Route::get('/footer/setup', 'FooterSetup')->name('footer.setup');
-    Route::post('/update/footer','UpdateFooter')->name('update.footer');
+    Route::post('/update/footer', 'UpdateFooter')->name('update.footer');
+});
 
+
+//Contact Route
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'Contact')->name('contact.me');
 });
 
 
