@@ -3,13 +3,13 @@
 use App\Models\BlogCategory;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FooterController;
-use App\Http\Controllers\Demo\DemoController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\BlogCategoryController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Home\HomeSliderController;
 
 Route::get('/', function () {
@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 
 Route::controller(DemoController::class)->group(function () {
+    Route::get('/', 'HomeMain')->name('home');
+
     Route::get('/about', 'Index')->name('about.page')->middleware('check');
     Route::get('/contact', 'ContactMethod')->name('cotact.page');
 });
