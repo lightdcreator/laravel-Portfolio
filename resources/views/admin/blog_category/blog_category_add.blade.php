@@ -21,9 +21,7 @@
                                     <div class="col-sm-10">
                                         <input name="blog_category" class="form-control" type="text"
                                             id="example-text-input">
-                                        @error('blog_category')
-                                            <span class="text-danger"> {{ $message }} </span>
-                                        @enderror
+
                                     </div>
                                 </div>
                                 <!-- end row -->
