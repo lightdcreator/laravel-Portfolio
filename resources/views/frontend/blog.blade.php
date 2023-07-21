@@ -1,8 +1,9 @@
 @extends('frontend.main_master')
 @section('main')
 @section('title')
-    Blog | RealestFact Website
+    Blog | EasyLearning Website
 @endsection
+
 <main>
 
     <!-- breadcrumb-area -->
@@ -67,13 +68,7 @@
                     @endforeach
 
                     <div class="pagination-wrap">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#"><i
-                                            class="far fa-long-arrow-left"></i></a></li>
-
-                            </ul>
-                        </nav>
+                        {{ $allblogs->links() }}
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -112,7 +107,8 @@
                             <ul class="sidebar__cat">
                                 @foreach ($categories as $cat)
                                     <li class="sidebar__cat__item"><a
-                                            href="{{ route('category.blog', $cat->id) }}">{{ $cat->blog_category }} </a>
+                                            href="{{ route('category.blog', $cat->id) }}">{{ $cat->blog_category }}
+                                        </a>
                                     </li>
                                 @endforeach
                             </ul>
